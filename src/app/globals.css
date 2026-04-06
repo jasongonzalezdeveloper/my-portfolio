@@ -1,0 +1,181 @@
+@import "tailwindcss";
+
+@theme {
+  /* Colors */
+  --color-navy-950: #080d1a;
+  --color-navy-900: #0d1526;
+  --color-navy-800: #111d35;
+  --color-cyan-accent: #00d4ff;
+  --color-amber-accent: #f59e0b;
+  --color-text-primary: #e8f0fe;
+  --color-text-muted: #7a8ba8;
+
+  /* Fonts */
+  --font-sans: var(--font-space-grotesk), system-ui, sans-serif;
+
+  /* Animations */
+  --animate-fade-in-up: fadeInUp 0.6s ease-out forwards;
+  --animate-pulse-slow: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  --animate-cursor-blink: cursorBlink 1s step-end infinite;
+  --animate-bounce-slow: bounceSlow 2s ease-in-out infinite;
+
+  /* Keyframes */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(24px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes cursorBlink {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+  }
+
+  @keyframes bounceSlow {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-8px);
+    }
+  }
+}
+
+/* ─── CSS Custom Properties ─────────────────────────────────────── */
+:root {
+  --bg-primary: #080d1a;
+  --accent-cyan: #00d4ff;
+  --accent-amber: #f59e0b;
+  --glass-bg: rgba(13, 21, 38, 0.65);
+  --glass-border: rgba(0, 212, 255, 0.12);
+  --text-primary: #e8f0fe;
+  --text-muted: #7a8ba8;
+}
+
+/* ─── Base Reset ────────────────────────────────────────────────── */
+html {
+  scroll-behavior: smooth;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ─── WCAG Focus Indicator ──────────────────────────────────────── */
+:focus-visible {
+  outline: 2px solid var(--accent-cyan);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* ─── Glassmorphism Utility ─────────────────────────────────────── */
+.glass {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+}
+
+/* ─── Glow Utilities ────────────────────────────────────────────── */
+.glow-cyan {
+  box-shadow:
+    0 0 20px rgba(0, 212, 255, 0.12),
+    0 0 40px rgba(0, 212, 255, 0.05);
+}
+
+.glow-cyan-strong {
+  box-shadow:
+    0 0 30px rgba(0, 212, 255, 0.2),
+    0 0 60px rgba(0, 212, 255, 0.1);
+}
+
+/* ─── Gradient Text ─────────────────────────────────────────────── */
+.gradient-text {
+  background: linear-gradient(135deg, var(--accent-cyan), var(--accent-amber));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ─── Section Spacing ───────────────────────────────────────────── */
+.section-padding {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .section-padding {
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+/* ─── Scrollbar Styling ─────────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 212, 255, 0.2);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 212, 255, 0.4);
+}
+
+/* ─── Horizontal Scroll (Learning section) ──────────────────────── */
+.scroll-snap-x {
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.scroll-snap-center {
+  scroll-snap-align: center;
+}
+
+/* ─── Colorblind Mode (Deuteranopia simulation) ─────────────────── */
+/* SVG filter defined inline, applied via CSS filter reference */
+.colorblind-mode {
+  filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><defs><filter id='cb'><feColorMatrix type='matrix' values='0.625 0.375 0 0 0  0.7 0.3 0 0 0  0 0.3 0.7 0 0  0 0 0 1 0'/></filter></defs></svg>#cb");
+}
+
+/* ─── Reduced Motion ────────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+}

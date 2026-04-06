@@ -1,0 +1,117 @@
+{
+  "nav": {
+    "about": "Sobre mí",
+    "experience": "Experiencia",
+    "skills": "Habilidades",
+    "projects": "Proyectos",
+    "learning": "Aprendiendo",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "greeting": "Hola, soy Jason.",
+    "roles": [
+      "Ingeniero Frontend Senior",
+      "Especialista en React & Next.js",
+      "Defensor de Accesibilidad",
+      "Obsesionado con el Rendimiento",
+      "Entusiasta de TypeScript"
+    ],
+    "cta_linkedin": "Perfil de LinkedIn",
+    "cta_github": "Perfil de GitHub",
+    "scroll_down": "Explorar"
+  },
+  "about": {
+    "heading": "Sobre Mí",
+    "paragraph_1": "Llevo más de 7 años haciendo desarrollo frontend, con mucha de esa experiencia en proyectos de banca digital. React y Angular son mis herramientas principales, aunque siempre estoy aprendiendo algo nuevo. La accesibilidad y los estándares WCAG son algo que me importa de verdad, no solo cumplir por cumplir.",
+    "paragraph_2": "Ahora mismo estoy enfocado en mejorar, como desarrollador y como persona. Quiero seguir creciendo, asumir proyectos más desafiantes y encontrar un equipo donde pueda demostrar de lo que soy capaz.",
+    "paragraph_3": "Vivo en Heredia, Costa Rica. Siempre construyendo algo.",
+    "code_comment": "// El stack actual de Jason"
+  },
+  "experience": {
+    "heading": "Experiencia",
+    "autodesk_role": "Ingeniero de Software",
+    "autodesk_via": "vía Net2Source (Outsourcing)",
+    "autodesk_note": "Contrato finalizado por reducción de personal a nivel global en enero 2026",
+    "autodesk_bullet_0": "Trabajé en un sistema de diseño compartido usado en varios productos de Autodesk. Construí componentes pensando en que otros equipos los pudieran usar y extender sin complicaciones.",
+    "autodesk_bullet_1": "Encontré algunos cuellos de botella en el pipeline de renderizado y en el bundle que sumaban alrededor de un 10% de mejora en rendimiento.",
+    "autodesk_bullet_2": "Trabajé de cerca con los diseñadores en Figma para que las implementaciones quedaran bien, respetando specs, espaciado y tokens de color.",
+    "autodesk_bullet_3": "Me aseguré de que los componentes funcionaran de forma consistente en Chrome, Firefox, Safari y Edge.",
+    "therapp_role": "Desarrollador Frontend (Freelance)",
+    "therapp_bullet_0": "Construí los flujos principales desde cero: autenticación, formularios multi-paso y dashboards. Integré las APIs del backend y me encargué del estado global con Redux y React Context.",
+    "therapp_bullet_1": "Era un equipo pequeño, así que tuve bastante autonomía en las decisiones de arquitectura. Avanzábamos rápido pero sin dejar el orden de lado.",
+    "therapp_bullet_2": "Convertí los diseños de Figma en componentes responsivos y mantuve consistencia en todo el codebase.",
+    "loyalty_role": "Desarrollador Frontend Mid Senior",
+    "loyalty_bullet_0": "Fui parte del equipo frontend de una plataforma de banca digital usada por instituciones financieras en Costa Rica y República Dominicana.",
+    "loyalty_bullet_1": "Investigué unos tiempos de carga lentos en contenido estático y después de optimizar el pipeline, los tiempos bajaron un 30%.",
+    "loyalty_bullet_2": "Integré APIs de terceros usando OAuth dentro de un entorno fintech regulado, coordinando con los equipos de backend y seguridad.",
+    "loyalty_bullet_3": "Colaboré con el equipo de UX en los diseños de Figma y construí los componentes Angular con Backbase, el framework sobre el que estaba construida la plataforma, asegurando que cumplieran los requerimientos de accesibilidad.",
+    "eprom_role": "Desarrollador Full-Stack",
+    "eprom_bullet_0": "Construí herramientas internas para reemplazar las hojas de cálculo que usaba el equipo para gestionar empleados, scheduling y seguimiento de proyectos.",
+    "eprom_bullet_1": "Reemplacé procesos manuales que ya no daban abasto y los convertí en software real.",
+    "eprom_bullet_2": "Revisé consultas lentas e integraciones del backend y logré bajar los tiempos de carga de forma notable."
+  },
+  "skills": {
+    "heading": "Habilidades",
+    "frontend": "Frontend",
+    "backend": "Backend & APIs",
+    "devops": "DevOps",
+    "testing": "Testing",
+    "tools": "Herramientas"
+  },
+  "projects": {
+    "heading": "Proyectos",
+    "featured_label": "Destacado",
+    "in_production": "En Producción",
+    "live_demo": "Ver Demo",
+    "view_code": "Ver Código",
+    "math_jenga_title": "Math Jenga",
+    "math_jenga_description": "Un juego que empecé por diversión y se convirtió en un proyecto real. Es una torre Jenga donde cada bloque tiene un problema matemático. Los niños tienen que resolverlo para colocar el bloque. Tiene modo daltónico, navegación por teclado, sistema de vidas y funciona en inglés y español.",
+    "therapp_title": "Therapp",
+    "therapp_description": "Una plataforma hecha para terapeutas. Se inscriben con una suscripción y tienen acceso a un catálogo de ejercicios, pueden crear los propios, administrar sus clientes, hacer citas, hacer seguimiento de los ejercicios de cada cliente y registrar observaciones y avances.",
+    "under_construction": "En Construcción",
+    "servitech_title": "ServitechCR",
+    "servitech_description": "Una plataforma que estoy construyendo para dos negocios costarricenses: Servitech y Macrobiotic Maná. Cada marca tiene su propia vista con catálogo de productos, servicios, cotizaciones y contacto. El panel de administración maneja inventario, ventas, distribuidores, categorías y cotizaciones, todo configurable por cliente. Las cotizaciones se generan automáticamente con un agente de IA orquestado con n8n y Groq.",
+    "negozia_title": "Negozia360",
+    "negozia_description": "Una prueba de concepto de una interfaz de punto de venta. La construí para explorar patrones de Redux Toolkit en un contexto real de ventas: navegar categorías de productos, agregar ítems a una venta activa, manejar varias ventas pendientes en paralelo y hacer seguimiento de totales en tiempo real. Incluye soporte multilenguaje.",
+    "poc_label": "Prueba de Concepto",
+    "details_soon": "Detalles próximamente"
+  },
+  "learning": {
+    "heading": "Actualmente Aprendiendo",
+    "subtitle": "Esto es en lo que estoy metido ahora mismo.",
+    "salesforce_title": "Salesforce para Frontend",
+    "salesforce_description": "Aprendiendo Lightning Web Components y cómo construir experiencias frontend dentro del ecosistema Salesforce.",
+    "ai_agents_title": "Arquitecturas de Agentes IA",
+    "ai_agents_description": "Entendiendo cómo se estructuran los sistemas multi-agente, cómo funciona el uso de herramientas en la práctica y cómo conectar todo con LangChain.",
+    "n8n_title": "Automatización con n8n",
+    "n8n_description": "Usando n8n para automatizar flujos de trabajo y conectar servicios sin tener que escribir todo el código de integración a mano.",
+    "redis_title": "Redis",
+    "redis_description": "Aprendiendo dónde encaja Redis como capa de caché y pub/sub, y cómo usarlo bien en servicios Node.js.",
+    "nodejs_title": "Node.js, más a fondo",
+    "nodejs_description": "Entendiendo cómo funciona Node por dentro: el event loop, streams y dónde suelen esconderse los problemas de rendimiento."
+  },
+  "contact": {
+    "heading": "Hablemos",
+    "subtitle": "Si tenés un proyecto en mente, querés hablar de tecnología o simplemente conectar, escribime.",
+    "linkedin_cta": "Conectar en LinkedIn",
+    "email_cta": "Enviar un Correo",
+    "availability": "Abierto a nuevas oportunidades"
+  },
+  "footer": {
+    "built_with": "Construido con Next.js 15, TypeScript & Claude AI",
+    "rights": "Todos los derechos reservados."
+  },
+  "a11y": {
+    "skip_to_content": "Saltar al contenido principal",
+    "open_menu": "Abrir menú de navegación",
+    "close_menu": "Cerrar menú de navegación",
+    "toggle_language": "Cambiar a español",
+    "toggle_language_es": "Cambiar a inglés",
+    "scroll_indicator": "Desplázate hacia el contenido",
+    "external_link": "se abre en una nueva pestaña",
+    "colorblind_on": "Activar modo para daltonismo",
+    "colorblind_off": "Desactivar modo para daltonismo",
+    "featured_badge": "Proyecto destacado",
+    "in_production_badge": "En producción"
+  }
+}

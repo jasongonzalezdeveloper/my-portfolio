@@ -1,0 +1,117 @@
+{
+  "nav": {
+    "about": "About",
+    "experience": "Experience",
+    "skills": "Skills",
+    "projects": "Projects",
+    "learning": "Learning",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Hey, I'm Jason.",
+    "roles": [
+      "Senior Frontend Engineer",
+      "React & Next.js Specialist",
+      "Accessibility Advocate",
+      "UI Performance Nerd",
+      "TypeScript Enthusiast"
+    ],
+    "cta_linkedin": "LinkedIn Profile",
+    "cta_github": "GitHub Profile",
+    "scroll_down": "Scroll to explore"
+  },
+  "about": {
+    "heading": "About Me",
+    "paragraph_1": "I've been doing frontend development for over 7 years, with a lot of that time in digital banking projects. React and Angular are where I feel most at home, but I'm always learning something new. I care genuinely about accessibility and WCAG standards — it's not just a checkbox for me.",
+    "paragraph_2": "Right now I'm focused on getting better, as a developer and as a person. I want to keep growing, take on harder problems, and find a team where I can show what I'm actually capable of.",
+    "paragraph_3": "Based in Heredia, Costa Rica. Always building something.",
+    "code_comment": "// Jason's current stack"
+  },
+  "experience": {
+    "heading": "Experience",
+    "autodesk_role": "Software Engineer",
+    "autodesk_via": "via Net2Source (Outsourcing)",
+    "autodesk_note": "Contract ended due to company-wide layoffs in January 2026",
+    "autodesk_bullet_0": "Worked on a shared design system used across multiple Autodesk product lines. Built components with a focus on making them easy to use and extend for other teams.",
+    "autodesk_bullet_1": "Tracked down some rendering bottlenecks and bundle issues that added up to about a 10% performance improvement.",
+    "autodesk_bullet_2": "Worked closely with designers in Figma to get implementations right, matching specs down to spacing and color tokens.",
+    "autodesk_bullet_3": "Made sure components worked consistently across Chrome, Firefox, Safari and Edge.",
+    "therapp_role": "Frontend Developer (Freelance)",
+    "therapp_bullet_0": "Built the main user flows from scratch: auth, multi-step forms, and dashboards. Integrated the backend APIs and owned the global state setup with Redux and React Context.",
+    "therapp_bullet_1": "Small team, so I had a lot of ownership over architecture decisions. Moved fast but kept things organized.",
+    "therapp_bullet_2": "Turned Figma designs into responsive components and kept things consistent across the codebase.",
+    "loyalty_role": "Mid Senior Frontend Developer",
+    "loyalty_bullet_0": "Part of the frontend team for a digital banking platform used by major financial institutions in Costa Rica and the Dominican Republic.",
+    "loyalty_bullet_1": "Looked into some slow content delivery issues and after optimizing the pipeline, static response times dropped by 30%.",
+    "loyalty_bullet_2": "Integrated third-party APIs using OAuth in a regulated fintech environment, working closely with backend and security teams.",
+    "loyalty_bullet_3": "Collaborated with UX on Figma designs and built accessible Angular components using Backbase, the framework the platform was built on, making sure everything met compliance requirements.",
+    "eprom_role": "Full-Stack Developer",
+    "eprom_bullet_0": "Built internal tooling to replace spreadsheets the team was using for employee management, scheduling, and project tracking.",
+    "eprom_bullet_1": "Took over manual workflows that had become too slow for the team's needs and replaced them with actual software.",
+    "eprom_bullet_2": "Dug into slow queries and backend calls and got overall load times down significantly."
+  },
+  "skills": {
+    "heading": "Skills",
+    "frontend": "Frontend",
+    "backend": "Backend & APIs",
+    "devops": "DevOps",
+    "testing": "Testing",
+    "tools": "Tools"
+  },
+  "projects": {
+    "heading": "Projects",
+    "featured_label": "Featured",
+    "in_production": "In Production",
+    "live_demo": "Live Demo",
+    "view_code": "View Code",
+    "math_jenga_title": "Math Jenga",
+    "math_jenga_description": "A game I built for fun that turned into a real project. It's a Jenga tower where each block has a math problem. Kids have to solve it to place the block. Has colorblind mode, keyboard nav, a lives system, and works in both English and Spanish.",
+    "therapp_title": "Therapp",
+    "therapp_description": "A platform built for therapists. They sign up with a subscription and get access to an exercise library, can build their own routines, manage their clients, schedule appointments, track each client's progress, and log observations over time.",
+    "under_construction": "Under Construction",
+    "servitech_title": "ServitechCR",
+    "servitech_description": "A platform I'm building for two Costa Rican businesses: Servitech and Macrobiotic Maná. Each brand gets its own view with product catalog, services, quote requests, and contact. The admin panel covers inventory, sales, distributors, categories, and quotes — all configurable per client. Quote generation runs through an AI agent orchestrated with n8n and Groq.",
+    "negozia_title": "Negozia360",
+    "negozia_description": "A proof of concept for a point-of-sale interface. Built to explore Redux Toolkit patterns in a real sales context: browse product categories, add items to an active sale, manage multiple pending sales in parallel, and track totals in real time. Multilingual support included.",
+    "poc_label": "Proof of Concept",
+    "details_soon": "Details coming soon"
+  },
+  "learning": {
+    "heading": "Currently Learning",
+    "subtitle": "Here's what I'm digging into right now.",
+    "salesforce_title": "Salesforce for Frontend",
+    "salesforce_description": "Getting into Lightning Web Components and how to build frontend experiences within the Salesforce platform.",
+    "ai_agents_title": "AI Agent Architectures",
+    "ai_agents_description": "Learning how multi-agent systems are structured, how tool use works in practice, and how to wire things together with LangChain.",
+    "n8n_title": "n8n Workflow Automation",
+    "n8n_description": "Using n8n to automate workflows and connect different services without writing a ton of glue code.",
+    "redis_title": "Redis",
+    "redis_description": "Learning where Redis fits in as a cache and pub/sub layer, and how to use it effectively in Node.js services.",
+    "nodejs_title": "Node.js, Deeper",
+    "nodejs_description": "Going deeper into how Node actually works: the event loop, streams, and where performance issues tend to hide."
+  },
+  "contact": {
+    "heading": "Get In Touch",
+    "subtitle": "Feel free to reach out if you want to talk tech, have a project in mind, or just connect.",
+    "linkedin_cta": "Connect on LinkedIn",
+    "email_cta": "Send an Email",
+    "availability": "Open to new opportunities"
+  },
+  "footer": {
+    "built_with": "Built with Next.js 15, TypeScript & Claude AI",
+    "rights": "All rights reserved."
+  },
+  "a11y": {
+    "skip_to_content": "Skip to main content",
+    "open_menu": "Open navigation menu",
+    "close_menu": "Close navigation menu",
+    "toggle_language": "Switch to Spanish",
+    "toggle_language_es": "Switch to English",
+    "scroll_indicator": "Scroll down to content",
+    "external_link": "opens in a new tab",
+    "colorblind_on": "Enable colorblind-friendly mode",
+    "colorblind_off": "Disable colorblind-friendly mode",
+    "featured_badge": "Featured project",
+    "in_production_badge": "In production"
+  }
+}

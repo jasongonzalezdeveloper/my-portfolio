@@ -51,16 +51,16 @@ export default function Skills() {
     <SectionWrapper id="skills" ariaLabelledBy="skills-heading">
       <h2
         id="skills-heading"
-        className="text-3xl sm:text-4xl font-bold text-[#e8f0fe] mb-12 text-center"
+        className="text-3xl sm:text-4xl font-bold text-text mb-12 text-center"
       >
         {t("skills.heading")}
-        <span aria-hidden="true" className="text-[#00d4ff]">.</span>
+        <span aria-hidden="true" className="text-accent">.</span>
       </h2>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {SKILL_CATEGORIES.map((category) => (
-          <GlassCard key={category.id} className="hover:border-[#00d4ff]/20 transition-colors duration-300">
-            <h3 className="text-[#00d4ff] text-xs font-semibold tracking-widest uppercase mb-4">
+          <GlassCard key={category.id} className="hover:border-accent/20 transition-colors duration-300">
+            <h3 className="text-accent text-xs font-mono font-semibold tracking-widest uppercase mb-4">
               {t(category.labelKey as Parameters<typeof t>[0])}
             </h3>
             <ul role="list" className="flex flex-wrap gap-2">

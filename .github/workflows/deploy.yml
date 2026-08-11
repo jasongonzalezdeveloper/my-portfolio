@@ -35,6 +35,8 @@ jobs:
         env:
           GITHUB_ACTIONS: true
           GITHUB_REPOSITORY: ${{ github.repository }}
+          NEXT_PUBLIC_CALENDLY_URL: ${{ vars.NEXT_PUBLIC_CALENDLY_URL }}
+          NEXT_PUBLIC_GOATCOUNTER_URL: ${{ vars.NEXT_PUBLIC_GOATCOUNTER_URL }}
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

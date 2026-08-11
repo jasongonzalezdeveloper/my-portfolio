@@ -73,7 +73,7 @@ export default function MobileMenu({ isOpen, onClose, links }: MobileMenuProps) 
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
-            className="fixed inset-0 z-40 bg-[#080d1a]/80 backdrop-blur-sm"
+            className="fixed inset-0 z-40 bg-bg/80 backdrop-blur-sm"
             onClick={onClose}
             aria-hidden="true"
           />
@@ -89,14 +89,14 @@ export default function MobileMenu({ isOpen, onClose, links }: MobileMenuProps) 
             animate={{ x: 0 }}
             exit={{ x: "100%" }}
             transition={{ type: "spring", damping: 25, stiffness: 200 }}
-            className="fixed top-0 right-0 h-full w-72 z-50 glass border-l border-[#00d4ff]/10 flex flex-col p-8"
+            className="fixed top-0 right-0 h-full w-72 z-50 glass border-l border-accent/10 flex flex-col p-8"
           >
             <button
               ref={closeButtonRef}
               onClick={onClose}
               aria-label={t("a11y.close_menu")}
-              className="self-end mb-8 p-2 rounded-full border border-white/10 text-[#7a8ba8]
-                         hover:text-[#00d4ff] hover:border-[#00d4ff]/30 transition-colors
+              className="self-end mb-8 p-2 rounded-full border border-border text-text-muted
+                         hover:text-accent hover:border-accent/30 transition-colors
                          min-h-[44px] min-w-[44px] flex items-center justify-center"
             >
               <svg
@@ -122,8 +122,8 @@ export default function MobileMenu({ isOpen, onClose, links }: MobileMenuProps) 
                     <a
                       href={link.href}
                       onClick={onClose}
-                      className="block py-3 px-4 rounded-lg text-lg font-medium text-[#e8f0fe]
-                                 hover:text-[#00d4ff] hover:bg-[#00d4ff]/5 transition-colors duration-200"
+                      className="block py-3 px-4 rounded-lg text-lg font-medium text-text
+                                 hover:text-accent hover:bg-accent/5 transition-colors duration-200"
                     >
                       {t(link.labelKey)}
                     </a>

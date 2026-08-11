@@ -50,3 +50,26 @@ export interface LanguageContextValue {
   locale: SupportedLocale;
   toggleLocale: () => void;
 }
+
+export type Theme = "light" | "dark";
+
+export interface ThemeContextValue {
+  theme: Theme;
+  toggleTheme: () => void;
+}
+
+export interface ServiceItem {
+  id: string;
+  titleKey: string;
+  descriptionKey: string;
+  icon: string;
+}
+
+export interface TestimonialItem {
+  id: string;
+  name: string;
+  role: string;
+  company: string;
+  quoteKey: string;
+  avatar?: string;
+}

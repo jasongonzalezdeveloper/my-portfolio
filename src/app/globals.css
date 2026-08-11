@@ -1,17 +1,20 @@
 @import "tailwindcss";
 
 @theme {
-  /* Colors */
-  --color-navy-950: #080d1a;
-  --color-navy-900: #0d1526;
-  --color-navy-800: #111d35;
-  --color-cyan-accent: #00d4ff;
-  --color-amber-accent: #f59e0b;
-  --color-text-primary: #e8f0fe;
-  --color-text-muted: #7a8ba8;
+  /* Colors — resolved from the semantic custom properties below, so they
+     stay correct across the data-theme flip without rebuilding @theme. */
+  --color-bg: var(--bg);
+  --color-bg-elevated: var(--bg-elevated);
+  --color-text: var(--text);
+  --color-text-muted: var(--text-muted);
+  --color-accent: var(--accent);
+  --color-accent-strong: var(--accent-strong);
+  --color-border: var(--border);
+  --color-success: var(--success);
 
   /* Fonts */
   --font-sans: var(--font-space-grotesk), system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains-mono), ui-monospace, monospace;
 
   /* Animations */
   --animate-fade-in-up: fadeInUp 0.6s ease-out forwards;
@@ -52,35 +55,67 @@
   }
 }
 
-/* ─── CSS Custom Properties ─────────────────────────────────────── */
+/* ─── Theme Tokens (Ember) ──────────────────────────────────────── */
+/* Dark is the default — matches pre-hydration / no-JS baseline. */
 :root {
-  --bg-primary: #080d1a;
-  --accent-cyan: #00d4ff;
-  --accent-amber: #f59e0b;
-  --glass-bg: rgba(13, 21, 38, 0.65);
-  --glass-border: rgba(0, 212, 255, 0.12);
-  --text-primary: #e8f0fe;
+  --bg: #0b0f1a;
+  --bg-elevated: #111d35;
+  --text: #e8f0fe;
   --text-muted: #7a8ba8;
+  --accent: #fb923c;
+  --accent-strong: #fdba74;
+  --border: rgba(255, 255, 255, 0.08);
+  --success: #22c55e;
+  --glass-bg: rgba(17, 29, 53, 0.65);
+  --glass-border: rgba(251, 146, 60, 0.14);
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) {
+    --bg: #faf8f5;
+    --bg-elevated: #ffffff;
+    --text: #1c1810;
+    --text-muted: #5b5548;
+    --accent: #c2410c;
+    --accent-strong: #9a3412;
+    --border: rgba(0, 0, 0, 0.09);
+    --success: #15803d;
+    --glass-bg: rgba(255, 255, 255, 0.7);
+    --glass-border: rgba(194, 65, 12, 0.16);
+  }
+}
+
+:root[data-theme="light"] {
+  --bg: #faf8f5;
+  --bg-elevated: #ffffff;
+  --text: #1c1810;
+  --text-muted: #5b5548;
+  --accent: #c2410c;
+  --accent-strong: #9a3412;
+  --border: rgba(0, 0, 0, 0.09);
+  --success: #15803d;
+  --glass-bg: rgba(255, 255, 255, 0.7);
+  --glass-border: rgba(194, 65, 12, 0.16);
 }
 
 /* ─── Base Reset ────────────────────────────────────────────────── */
 html {
   scroll-behavior: smooth;
-  background-color: var(--bg-primary);
-  color: var(--text-primary);
+  background-color: var(--bg);
+  color: var(--text);
   font-family: var(--font-sans);
 }
 
 body {
-  background-color: var(--bg-primary);
-  color: var(--text-primary);
+  background-color: var(--bg);
+  color: var(--text);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 /* ─── WCAG Focus Indicator ──────────────────────────────────────── */
 :focus-visible {
-  outline: 2px solid var(--accent-cyan);
+  outline: 2px solid var(--accent);
   outline-offset: 3px;
   border-radius: 4px;
 }
@@ -88,30 +123,14 @@ body {
 /* ─── Glassmorphism Utility ─────────────────────────────────────── */
 .glass {
   background: var(--glass-bg);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   border: 1px solid var(--glass-border);
 }
 
-/* ─── Glow Utilities ────────────────────────────────────────────── */
-.glow-cyan {
-  box-shadow:
-    0 0 20px rgba(0, 212, 255, 0.12),
-    0 0 40px rgba(0, 212, 255, 0.05);
-}
-
-.glow-cyan-strong {
-  box-shadow:
-    0 0 30px rgba(0, 212, 255, 0.2),
-    0 0 60px rgba(0, 212, 255, 0.1);
-}
-
-/* ─── Gradient Text ─────────────────────────────────────────────── */
-.gradient-text {
-  background: linear-gradient(135deg, var(--accent-cyan), var(--accent-amber));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+/* ─── Glow Utility ──────────────────────────────────────────────── */
+.glow-accent {
+  box-shadow: 0 0 24px color-mix(in srgb, var(--accent) 8%, transparent);
 }
 
 /* ─── Section Spacing ───────────────────────────────────────────── */
@@ -137,16 +156,16 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--bg-primary);
+  background: var(--bg);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(0, 212, 255, 0.2);
+  background: color-mix(in srgb, var(--accent) 20%, transparent);
   border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(0, 212, 255, 0.4);
+  background: color-mix(in srgb, var(--accent) 40%, transparent);
 }
 
 /* ─── Horizontal Scroll (Learning section) ──────────────────────── */

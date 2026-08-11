@@ -17,37 +17,41 @@ const PROJECTS: ProjectItem[] = [
     isFeatured: true,
   },
   {
-    id: "therapp",
-    titleKey: "projects.therapp_title",
-    descriptionKey: "projects.therapp_description",
-    techStack: ["React", "Next.js", "Redux", "TypeScript", "Tailwind CSS"],
-    image: "/images/therapp.png",
-    liveUrl: "https://app.therapp.health/",
-    isFeatured: false,
-    isInProduction: true,
-  },
-  {
     id: "servitech",
     titleKey: "projects.servitech_title",
     descriptionKey: "projects.servitech_description",
     techStack: [
-      "Next.js", "React", "TypeScript", "Redux Toolkit", "RTK Query",
-      "Zod", "Tailwind CSS", "Express.js", "Prisma", "PostgreSQL",
-      "Redis", "n8n", "Groq AI",
+      "Next.js 16", "React", "TypeScript", "Redux Toolkit", "RTK Query",
+      "Tailwind CSS", "Express", "Prisma", "PostgreSQL", "Redis", "OAuth2",
     ],
     image: "/images/servitech.png",
     isFeatured: false,
     isUnderConstruction: true,
   },
   {
-    id: "negozia",
-    titleKey: "projects.negozia_title",
-    descriptionKey: "projects.negozia_description",
-    techStack: ["React", "TypeScript", "Redux Toolkit", "Tailwind CSS", "i18next"],
-    liveUrl: "https://jasongonzalezdeveloper.github.io/negozia360-poc/sale/",
-    githubUrl: "https://github.com/jasongonzalezdeveloper/negozia360-poc",
+    id: "copicentro",
+    titleKey: "projects.copicentro_title",
+    descriptionKey: "projects.copicentro_description",
+    techStack: [
+      "Next.js 14", "TypeScript", "Tailwind CSS", "Redux Toolkit", "i18next",
+      "Node.js 20", "Express 5", "Prisma", "PostgreSQL", "Redis",
+    ],
+    image: "/images/copicentro.png",
+    liveUrl: "https://copicentrocr.com",
     isFeatured: false,
-    isPoc: true,
+    isInProduction: true,
+  },
+  {
+    id: "sorteos-blue-horizon",
+    titleKey: "projects.sorteos_blue_horizon_title",
+    descriptionKey: "projects.sorteos_blue_horizon_description",
+    techStack: [
+      "Next.js 16", "React 19", "TypeScript", "Redux Toolkit", "Tailwind CSS",
+      "Express 5", "Prisma 7", "PostgreSQL", "Cloudflare Workers",
+    ],
+    liveUrl: "https://lionsbeachhome.com",
+    isFeatured: false,
+    isInProduction: true,
   },
 ];
 
@@ -60,10 +64,10 @@ export default function Projects() {
     <SectionWrapper id="projects" ariaLabelledBy="projects-heading">
       <h2
         id="projects-heading"
-        className="text-3xl sm:text-4xl font-bold text-[#e8f0fe] mb-12 text-center"
+        className="text-3xl sm:text-4xl font-bold text-text mb-12 text-center"
       >
         {t("projects.heading")}
-        <span aria-hidden="true" className="text-[#00d4ff]">.</span>
+        <span aria-hidden="true" className="text-accent">.</span>
       </h2>
 
       <div className="space-y-6">

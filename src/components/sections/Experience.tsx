@@ -71,10 +71,10 @@ export default function Experience() {
     <SectionWrapper id="experience" ariaLabelledBy="experience-heading">
       <h2
         id="experience-heading"
-        className="text-3xl sm:text-4xl font-bold text-[#e8f0fe] mb-16 text-center"
+        className="text-3xl sm:text-4xl font-bold text-text mb-16 text-center"
       >
         {t("experience.heading")}
-        <span aria-hidden="true" className="text-[#00d4ff]">.</span>
+        <span aria-hidden="true" className="text-accent">.</span>
       </h2>
 
       {/* Timeline container */}
@@ -83,7 +83,7 @@ export default function Experience() {
         <div
           aria-hidden="true"
           className="hidden md:block absolute left-1/2 -translate-x-px top-0 bottom-0
-                     w-px bg-gradient-to-b from-[#00d4ff]/30 via-[#00d4ff]/15 to-transparent"
+                     w-px bg-gradient-to-b from-accent/30 via-accent/15 to-transparent"
         />
 
         <div className="flex flex-col gap-10">

@@ -14,13 +14,13 @@ export default function About() {
         <div className="space-y-6">
           <h2
             id="about-heading"
-            className="text-3xl sm:text-4xl font-bold text-[#e8f0fe]"
+            className="text-3xl sm:text-4xl font-bold text-text"
           >
             {t("about.heading")}
-            <span aria-hidden="true" className="text-[#00d4ff]">.</span>
+            <span aria-hidden="true" className="text-accent">.</span>
           </h2>
 
-          <div className="space-y-4 text-[#7a8ba8] leading-relaxed">
+          <div className="space-y-4 text-text-muted leading-relaxed">
             <p>{t("about.paragraph_1")}</p>
             <p>{t("about.paragraph_2")}</p>
             <p>
@@ -30,8 +30,8 @@ export default function About() {
 
           {/* Accent divider */}
           <div className="flex items-center gap-3">
-            <div className="h-px flex-1 bg-gradient-to-r from-[#00d4ff]/30 to-transparent" />
-            <span className="text-[#00d4ff] text-xs font-semibold tracking-widest uppercase">
+            <div className="h-px flex-1 bg-gradient-to-r from-accent/30 to-transparent" />
+            <span className="text-accent text-xs font-mono font-semibold tracking-widest uppercase">
               Costa Rica
             </span>
           </div>

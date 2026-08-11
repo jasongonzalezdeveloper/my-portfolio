@@ -3,11 +3,14 @@
     "about": "Sobre mí",
     "experience": "Experiencia",
     "skills": "Habilidades",
+    "services": "Servicios",
     "projects": "Proyectos",
     "learning": "Aprendiendo",
-    "contact": "Contacto"
+    "contact": "Contacto",
+    "cv_download": "Descargar CV"
   },
   "hero": {
+    "eyebrow": "7+ años en frontend",
     "greeting": "Hola, soy Jason.",
     "roles": [
       "Ingeniero Frontend Senior",
@@ -18,6 +21,7 @@
     ],
     "cta_linkedin": "Perfil de LinkedIn",
     "cta_github": "Perfil de GitHub",
+    "cta_cv": "Descargar CV",
     "scroll_down": "Explorar"
   },
   "about": {
@@ -58,6 +62,21 @@
     "testing": "Testing",
     "tools": "Herramientas"
   },
+  "services": {
+    "heading": "Servicios",
+    "subtitle": "Lo que puedo construir para vos, según el stack y los proyectos de arriba.",
+    "cta": "Hablemos de tu proyecto",
+    "frontend_title": "Desarrollo Frontend a Medida",
+    "frontend_description": "Interfaces React y Next.js hechas a medida, pensadas para rendimiento, accesibilidad y mantenibilidad a largo plazo.",
+    "fullstack_title": "Aplicaciones Full-Stack",
+    "fullstack_description": "Apps completas con frontend en Next.js y backend en Express/Prisma/PostgreSQL, desplegadas y listas para producción.",
+    "dashboards_title": "Paneles Administrativos y Herramientas Internas",
+    "dashboards_description": "Paneles data-driven para gestionar inventario, ventas, usuarios y operaciones, construidos según cómo trabaja realmente tu equipo.",
+    "ai_title": "Integraciones con IA",
+    "ai_description": "Chatbots, generación automatizada de cotizaciones y documentos, y otros usos prácticos de modelos de IA dentro de tu producto.",
+    "a11y_title": "Accesibilidad y Rendimiento",
+    "a11y_description": "Auditorías y correcciones enfocadas en WCAG, además de optimización de rendering y tamaño de bundle para interfaces más rápidas y usables."
+  },
   "projects": {
     "heading": "Proyectos",
     "featured_label": "Destacado",
@@ -66,19 +85,23 @@
     "view_code": "Ver Código",
     "math_jenga_title": "Math Jenga",
     "math_jenga_description": "Un juego que empecé por diversión y se convirtió en un proyecto real. Es una torre Jenga donde cada bloque tiene un problema matemático. Los niños tienen que resolverlo para colocar el bloque. Tiene modo daltónico, navegación por teclado, sistema de vidas y funciona en inglés y español.",
-    "therapp_title": "Therapp",
-    "therapp_description": "Una plataforma hecha para terapeutas. Se inscriben con una suscripción y tienen acceso a un catálogo de ejercicios, pueden crear los propios, administrar sus clientes, hacer citas, hacer seguimiento de los ejercicios de cada cliente y registrar observaciones y avances.",
     "under_construction": "En Construcción",
     "servitech_title": "ServitechCR",
-    "servitech_description": "Una plataforma que estoy construyendo para dos negocios costarricenses: Servitech y Macrobiotic Maná. Cada marca tiene su propia vista con catálogo de productos, servicios, cotizaciones y contacto. El panel de administración maneja inventario, ventas, distribuidores, categorías y cotizaciones, todo configurable por cliente. Las cotizaciones se generan automáticamente con un agente de IA orquestado con n8n y Groq.",
-    "negozia_title": "Negozia360",
-    "negozia_description": "Una prueba de concepto de una interfaz de punto de venta. La construí para explorar patrones de Redux Toolkit en un contexto real de ventas: navegar categorías de productos, agregar ítems a una venta activa, manejar varias ventas pendientes en paralelo y hacer seguimiento de totales en tiempo real. Incluye soporte multilenguaje.",
+    "servitech_description": "Una plataforma multi-tenant que sirve a dos marcas costarricenses — Servitech y Macrobiótica Maná — desde una sola base de datos, cada una con su propia tienda, catálogo y theming propio. Incluye generación automatizada de cotizaciones con IA, un chatbot de soporte, un panel administrativo para inventario, ventas y distribuidores, y autenticación con Google OAuth2.",
+    "copicentro_title": "Copicentro",
+    "copicentro_description": "Plataforma de e-commerce y servicios en producción para Copicentro, una copistería e imprenta costarricense. Autenticación de dos factores, permisos por rol para cuentas de staff y administración, un checkout de varios pasos, y una suite de pruebas automatizadas que cubre los flujos críticos de compra.",
+    "sorteos_blue_horizon_title": "Sorteos Blue Horizon",
+    "sorteos_blue_horizon_description": "Plataforma de sorteos en producción para Lions Beach Home. La reserva de números con liberación automática por tiempo evita dobles reservas, un verificador público de resultados permite confirmar cada sorteo de forma independiente, un sistema de auditoría registra cada reserva, y notificaciones automáticas por WhatsApp, Telegram y correo mantienen informados a los participantes.",
     "poc_label": "Prueba de Concepto",
     "details_soon": "Detalles próximamente"
+  },
+  "testimonials": {
+    "heading": "Lo Que Dicen Mis Clientes"
   },
   "learning": {
     "heading": "Actualmente Aprendiendo",
     "subtitle": "Esto es en lo que estoy metido ahora mismo.",
+    "working_on_it": "En proceso",
     "salesforce_title": "Salesforce para Frontend",
     "salesforce_description": "Aprendiendo Lightning Web Components y cómo construir experiencias frontend dentro del ecosistema Salesforce.",
     "ai_agents_title": "Arquitecturas de Agentes IA",
@@ -95,10 +118,11 @@
     "subtitle": "Si tenés un proyecto en mente, querés hablar de tecnología o simplemente conectar, escribime.",
     "linkedin_cta": "Conectar en LinkedIn",
     "email_cta": "Enviar un Correo",
+    "calendly_cta": "Agendar una Llamada",
     "availability": "Abierto a nuevas oportunidades"
   },
   "footer": {
-    "built_with": "Construido con Next.js 15, TypeScript & Claude AI",
+    "built_with": "Construido con Next.js 16, TypeScript & Claude AI",
     "rights": "Todos los derechos reservados."
   },
   "a11y": {
@@ -107,6 +131,8 @@
     "close_menu": "Cerrar menú de navegación",
     "toggle_language": "Cambiar a español",
     "toggle_language_es": "Cambiar a inglés",
+    "theme_to_light": "Cambiar a tema claro",
+    "theme_to_dark": "Cambiar a tema oscuro",
     "scroll_indicator": "Desplázate hacia el contenido",
     "external_link": "se abre en una nueva pestaña",
     "colorblind_on": "Activar modo para daltonismo",

@@ -20,7 +20,7 @@ export default function GlassCard<T extends ValidTag = "div">({
   const Tag = (as ?? "div") as ValidTag;
   return (
     <Tag
-      className={`glass rounded-xl p-6 transition-colors duration-300 ${glow ? "glow-cyan" : ""} ${className}`}
+      className={`glass rounded-xl p-6 transition-colors duration-300 ${glow ? "glow-accent" : ""} ${className}`}
       {...(rest as Record<string, unknown>)}
     >
       {children}

@@ -1,15 +1,13 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useColorblindMode } from "@/hooks/useColorblindMode";
+import { useHasMounted } from "@/hooks/useHasMounted";
 
 export default function ColorblindToggle() {
   const { t } = useTranslation();
   const { enabled, toggle } = useColorblindMode();
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => { setMounted(true); }, []);
+  const mounted = useHasMounted();
 
   const active = mounted && enabled;
 
@@ -22,8 +20,8 @@ export default function ColorblindToggle() {
       className={`flex items-center justify-center w-10 h-10 rounded-full border
                   transition-colors duration-200 text-sm
                   ${active
-                    ? "border-[#f59e0b]/50 bg-[#f59e0b]/10 text-[#f59e0b]"
-                    : "border-white/10 text-[#7a8ba8] hover:text-[#00d4ff] hover:border-[#00d4ff]/30"
+                    ? "border-accent/50 bg-accent/10 text-accent"
+                    : "border-border text-text-muted hover:text-accent hover:border-accent/30"
                   }`}
     >
       {/* Eye icon */}

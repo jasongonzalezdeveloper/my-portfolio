@@ -4,12 +4,17 @@ import { useState, useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import LanguageSwitcher from "./LanguageSwitcher";
 import ColorblindToggle from "./ColorblindToggle";
+import ThemeToggle from "./ThemeToggle";
 import MobileMenu from "./MobileMenu";
+import { assetPath } from "@/lib/assetPath";
+
+const CV_URL = assetPath("/cv/Jason_Gonzalez_Garcia_Frontend_Developer_Resume.pdf");
 
 const NAV_LINKS = [
   { labelKey: "nav.about", href: "#about" },
   { labelKey: "nav.experience", href: "#experience" },
   { labelKey: "nav.skills", href: "#skills" },
+  { labelKey: "nav.services", href: "#services" },
   { labelKey: "nav.projects", href: "#projects" },
   { labelKey: "nav.learning", href: "#learning" },
   { labelKey: "nav.contact", href: "#contact" },
@@ -63,7 +68,7 @@ export default function Header() {
       role="banner"
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "glass border-b border-[#00d4ff]/10 shadow-lg"
+          ? "glass border-b border-accent/10 shadow-lg"
           : "bg-transparent"
       }`}
     >
@@ -72,14 +77,14 @@ export default function Header() {
         <a
           href="#main-content"
           aria-label="Jason González, back to top"
-          className="text-[#00d4ff] font-bold text-xl tracking-tight
-                     hover:text-white transition-colors duration-200
+          className="text-accent font-mono font-bold text-xl tracking-tight
+                     hover:text-accent-strong transition-colors duration-200
                      relative group"
         >
           <span className="relative z-10">JG</span>
           <span
             aria-hidden="true"
-            className="absolute -bottom-0.5 left-0 w-0 h-0.5 bg-[#00d4ff] transition-all duration-300 group-hover:w-full"
+            className="absolute -bottom-0.5 left-0 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full"
           />
         </a>
 
@@ -96,14 +101,14 @@ export default function Header() {
                     aria-current={isActive ? "location" : undefined}
                     className={`text-sm font-medium transition-colors duration-200 relative group ${
                       isActive
-                        ? "text-[#00d4ff]"
-                        : "text-[#7a8ba8] hover:text-[#e8f0fe]"
+                        ? "text-accent"
+                        : "text-text-muted hover:text-text"
                     }`}
                   >
                     {t(link.labelKey as NavLabelKey)}
                     <span
                       aria-hidden="true"
-                      className={`absolute -bottom-0.5 left-0 h-px bg-[#00d4ff] transition-all duration-300 ${
+                      className={`absolute -bottom-0.5 left-0 h-px bg-accent transition-all duration-300 ${
                         isActive ? "w-full" : "w-0 group-hover:w-full"
                       }`}
                     />
@@ -116,6 +121,20 @@ export default function Header() {
 
         {/* Controls */}
         <div className="flex items-center gap-3">
+          <a
+            href={CV_URL}
+            download
+            aria-label={t("nav.cv_download")}
+            title={t("nav.cv_download")}
+            className="hidden sm:flex items-center justify-center w-10 h-10 rounded-full border
+                       border-border text-text-muted transition-colors duration-200
+                       hover:text-accent hover:border-accent/30 min-h-[44px] min-w-[44px]"
+          >
+            <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <path d="M12 3v12m0 0l-4-4m4 4l4-4M4 17v2a2 2 0 002 2h12a2 2 0 002-2v-2" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+          </a>
+          <ThemeToggle />
           <ColorblindToggle />
           <LanguageSwitcher />
 
@@ -126,8 +145,8 @@ export default function Header() {
             aria-label={t("a11y.open_menu")}
             aria-expanded={menuOpen}
             aria-controls="mobile-nav-dialog"
-            className="md:hidden p-2 rounded-full border border-white/10 text-[#7a8ba8]
-                       hover:text-[#00d4ff] hover:border-[#00d4ff]/30 transition-colors
+            className="md:hidden p-2 rounded-full border border-border text-text-muted
+                       hover:text-accent hover:border-accent/30 transition-colors
                        min-h-[44px] min-w-[44px] flex items-center justify-center"
           >
             <svg

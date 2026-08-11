@@ -1,15 +1,13 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useLanguage } from "@/context/LanguageContext";
+import { useHasMounted } from "@/hooks/useHasMounted";
 
 export default function LanguageSwitcher() {
   const { locale, toggleLocale } = useLanguage();
   const { t } = useTranslation();
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => { setMounted(true); }, []);
+  const mounted = useHasMounted();
 
   // Before hydration, render a neutral placeholder that matches SSR output
   const displayLocale = mounted ? locale : "en";
@@ -20,8 +18,8 @@ export default function LanguageSwitcher() {
       onClick={toggleLocale}
       aria-label={label}
       aria-pressed={mounted ? locale === "es" : false}
-      className="flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-white/10
-                 text-sm font-medium text-[#7a8ba8] hover:text-[#00d4ff] hover:border-[#00d4ff]/30
+      className="flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-border
+                 text-sm font-medium text-text-muted hover:text-accent hover:border-accent/30
                  transition-colors duration-200 min-h-[44px] min-w-[44px]"
     >
       <span aria-hidden="true" className="text-base leading-none">

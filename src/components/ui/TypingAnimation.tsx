@@ -27,12 +27,12 @@ export default function TypingAnimation({
   const display = reducedMotion ? (roles[0] ?? "") : animated;
 
   return (
-    <span className="text-[#00d4ff] font-semibold">
+    <span className="text-accent font-semibold">
       {display}
       {!reducedMotion && (
         <span
           aria-hidden="true"
-          className="inline-block ml-0.5 w-0.5 h-[1.1em] bg-[#00d4ff] align-middle"
+          className="inline-block ml-0.5 w-0.5 h-[1.1em] bg-accent align-middle"
           style={{ animation: "cursorBlink 1s step-end infinite" }}
         />
       )}

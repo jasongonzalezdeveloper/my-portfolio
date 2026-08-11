@@ -3,11 +3,14 @@
     "about": "About",
     "experience": "Experience",
     "skills": "Skills",
+    "services": "Services",
     "projects": "Projects",
     "learning": "Learning",
-    "contact": "Contact"
+    "contact": "Contact",
+    "cv_download": "Download CV"
   },
   "hero": {
+    "eyebrow": "7+ years in frontend",
     "greeting": "Hey, I'm Jason.",
     "roles": [
       "Senior Frontend Engineer",
@@ -18,6 +21,7 @@
     ],
     "cta_linkedin": "LinkedIn Profile",
     "cta_github": "GitHub Profile",
+    "cta_cv": "Download CV",
     "scroll_down": "Scroll to explore"
   },
   "about": {
@@ -58,6 +62,21 @@
     "testing": "Testing",
     "tools": "Tools"
   },
+  "services": {
+    "heading": "Services",
+    "subtitle": "What I can build for you, based on the stack and projects above.",
+    "cta": "Let's talk about your project",
+    "frontend_title": "Custom Frontend Development",
+    "frontend_description": "Tailored React and Next.js interfaces built for performance, accessibility, and long-term maintainability.",
+    "fullstack_title": "Full-Stack Applications",
+    "fullstack_description": "End-to-end apps with a Next.js frontend and an Express/Prisma/PostgreSQL backend, deployed and production-ready.",
+    "dashboards_title": "Admin Dashboards & Internal Tools",
+    "dashboards_description": "Data-driven panels for managing inventory, sales, users, and operations — built around how your team actually works.",
+    "ai_title": "AI Integrations",
+    "ai_description": "Chatbots, automated quote and document generation, and other practical uses of AI models inside your product.",
+    "a11y_title": "Accessibility & Performance",
+    "a11y_description": "WCAG-focused audits and remediation, plus rendering and bundle-size optimization for faster, more usable interfaces."
+  },
   "projects": {
     "heading": "Projects",
     "featured_label": "Featured",
@@ -66,19 +85,23 @@
     "view_code": "View Code",
     "math_jenga_title": "Math Jenga",
     "math_jenga_description": "A game I built for fun that turned into a real project. It's a Jenga tower where each block has a math problem. Kids have to solve it to place the block. Has colorblind mode, keyboard nav, a lives system, and works in both English and Spanish.",
-    "therapp_title": "Therapp",
-    "therapp_description": "A platform built for therapists. They sign up with a subscription and get access to an exercise library, can build their own routines, manage their clients, schedule appointments, track each client's progress, and log observations over time.",
     "under_construction": "Under Construction",
     "servitech_title": "ServitechCR",
-    "servitech_description": "A platform I'm building for two Costa Rican businesses: Servitech and Macrobiotic Maná. Each brand gets its own view with product catalog, services, quote requests, and contact. The admin panel covers inventory, sales, distributors, categories, and quotes — all configurable per client. Quote generation runs through an AI agent orchestrated with n8n and Groq.",
-    "negozia_title": "Negozia360",
-    "negozia_description": "A proof of concept for a point-of-sale interface. Built to explore Redux Toolkit patterns in a real sales context: browse product categories, add items to an active sale, manage multiple pending sales in parallel, and track totals in real time. Multilingual support included.",
+    "servitech_description": "A multi-tenant platform serving two Costa Rican brands — Servitech and Macrobiótica Maná — from a single database, each with its own storefront, catalog, and per-brand theming. Includes AI-automated quote generation, a support chatbot, an admin panel for inventory, sales and distributors, and Google OAuth2 authentication.",
+    "copicentro_title": "Copicentro",
+    "copicentro_description": "Production e-commerce and services platform for Copicentro, a Costa Rican printing and office-supply business. Two-factor authentication, role-based permissions for staff and admin accounts, a multi-step checkout flow, and an automated test suite covering critical purchase paths.",
+    "sorteos_blue_horizon_title": "Sorteos Blue Horizon",
+    "sorteos_blue_horizon_description": "Production raffle platform for Lions Beach Home. Timed number reservations prevent double-booking, a public results verifier lets anyone independently confirm a draw, a full audit trail tracks every reservation, and automated WhatsApp, Telegram, and email notifications keep participants informed.",
     "poc_label": "Proof of Concept",
     "details_soon": "Details coming soon"
+  },
+  "testimonials": {
+    "heading": "What Clients Say"
   },
   "learning": {
     "heading": "Currently Learning",
     "subtitle": "Here's what I'm digging into right now.",
+    "working_on_it": "Working on it",
     "salesforce_title": "Salesforce for Frontend",
     "salesforce_description": "Getting into Lightning Web Components and how to build frontend experiences within the Salesforce platform.",
     "ai_agents_title": "AI Agent Architectures",
@@ -95,10 +118,11 @@
     "subtitle": "Feel free to reach out if you want to talk tech, have a project in mind, or just connect.",
     "linkedin_cta": "Connect on LinkedIn",
     "email_cta": "Send an Email",
+    "calendly_cta": "Book a Call",
     "availability": "Open to new opportunities"
   },
   "footer": {
-    "built_with": "Built with Next.js 15, TypeScript & Claude AI",
+    "built_with": "Built with Next.js 16, TypeScript & Claude AI",
     "rights": "All rights reserved."
   },
   "a11y": {
@@ -107,6 +131,8 @@
     "close_menu": "Close navigation menu",
     "toggle_language": "Switch to Spanish",
     "toggle_language_es": "Switch to English",
+    "theme_to_light": "Switch to light theme",
+    "theme_to_dark": "Switch to dark theme",
     "scroll_indicator": "Scroll down to content",
     "external_link": "opens in a new tab",
     "colorblind_on": "Enable colorblind-friendly mode",

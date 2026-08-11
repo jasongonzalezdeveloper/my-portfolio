@@ -34,15 +34,15 @@ export default function CodeBlock() {
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.4 }}
-        className="text-[#7a8ba8] mb-1"
+        className="text-text-muted mb-1"
       >
         {t("about.code_comment")}
       </motion.p>
 
-      <p className="text-[#e8f0fe] mb-1">
-        <span className="text-[#c792ea]">const</span>{" "}
-        <span className="text-[#82aaff]">stack</span>{" "}
-        <span className="text-[#e8f0fe]">= {"{"}</span>
+      <p className="text-text mb-1">
+        <span className="text-accent-strong">const</span>{" "}
+        <span className="text-text">stack</span>{" "}
+        <span className="text-text">= {"{"}</span>
       </p>
 
       <motion.div
@@ -63,22 +63,22 @@ export default function CodeBlock() {
               visible: { opacity: 1, x: 0, transition: { duration: 0.4 } },
             }}
           >
-            <span className="text-[#00d4ff]">{key}</span>
-            <span className="text-[#e8f0fe]">: [</span>
+            <span className="text-accent">{key}</span>
+            <span className="text-text">: [</span>
             {values.map((v, i) => (
               <span key={v}>
-                <span className="text-[#f59e0b]">&quot;{v}&quot;</span>
+                <span className="text-accent-strong">&quot;{v}&quot;</span>
                 {i < values.length - 1 && (
-                  <span className="text-[#e8f0fe]">, </span>
+                  <span className="text-text">, </span>
                 )}
               </span>
             ))}
-            <span className="text-[#e8f0fe]">],</span>
+            <span className="text-text">],</span>
           </motion.p>
         ))}
       </motion.div>
 
-      <p className="text-[#e8f0fe]">{"}"}</p>
+      <p className="text-text">{"}"}</p>
     </div>
   );
 }

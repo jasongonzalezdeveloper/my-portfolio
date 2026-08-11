@@ -28,8 +28,8 @@ export default function TimelineItem({ item, index }: TimelineItemProps) {
       {/* Timeline dot */}
       <div
         aria-hidden="true"
-        className="absolute left-1/2 -translate-x-1/2 w-3 h-3 rounded-full bg-[#00d4ff]
-                   border-2 border-[#080d1a] shadow-[0_0_8px_rgba(0,212,255,0.5)]
+        className="absolute left-1/2 -translate-x-1/2 w-3 h-3 rounded-full bg-accent
+                   border-2 border-bg glow-accent
                    hidden md:block top-8 z-10"
       />
 
@@ -37,31 +37,31 @@ export default function TimelineItem({ item, index }: TimelineItemProps) {
         className={`md:w-[45%] ${isLeft ? "md:mr-auto md:pr-8" : "md:ml-auto md:pl-8"}`}
       >
         <GlassCard
-          className="hover:border-[#00d4ff]/25 transition-colors duration-300"
+          className="hover:border-accent/25 transition-colors duration-300"
         >
           {/* Header */}
           <div className="mb-4">
             <div className="flex flex-wrap items-start justify-between gap-2 mb-1">
-              <h3 className="text-lg font-bold text-[#e8f0fe]">
+              <h3 className="text-lg font-bold text-text">
                 {item.company}
               </h3>
-              <span className="text-xs text-[#7a8ba8] font-mono whitespace-nowrap">
+              <span className="text-xs text-text-muted font-mono whitespace-nowrap">
                 <time>{item.startDate}</time>
                 <span aria-hidden="true"> – </span>
                 <span className="sr-only"> to </span>
                 <time>{item.endDate}</time>
               </span>
             </div>
-            <p className="text-[#00d4ff] font-semibold text-sm">
+            <p className="text-accent font-semibold text-sm">
               {t(item.role as Parameters<typeof t>[0])}
             </p>
             {item.via && (
-              <p className="text-[#7a8ba8] text-xs mt-0.5">
+              <p className="text-text-muted text-xs mt-0.5">
                 {t(item.via as Parameters<typeof t>[0])}
               </p>
             )}
             {item.note && (
-              <p className="text-[#f59e0b]/70 text-xs mt-1 italic">
+              <p className="text-accent-strong/80 text-xs mt-1 italic">
                 {t(item.note as Parameters<typeof t>[0])}
               </p>
             )}
@@ -72,9 +72,9 @@ export default function TimelineItem({ item, index }: TimelineItemProps) {
             {item.bulletKeys.map((key) => (
               <li
                 key={key}
-                className="flex gap-2 text-sm text-[#7a8ba8] leading-relaxed"
+                className="flex gap-2 text-sm text-text-muted leading-relaxed"
               >
-                <span aria-hidden="true" className="text-[#00d4ff] mt-1 shrink-0 text-xs">▸</span>
+                <span aria-hidden="true" className="text-accent mt-1 shrink-0 text-xs">▸</span>
                 <span>{t(key as Parameters<typeof t>[0])}</span>
               </li>
             ))}
@@ -88,7 +88,7 @@ export default function TimelineItem({ item, index }: TimelineItemProps) {
           >
             {item.techStack.map((tech) => (
               <li key={tech}>
-                <TechBadge label={tech} variant="cyan" />
+                <TechBadge label={tech} variant="accent" />
               </li>
             ))}
           </ul>

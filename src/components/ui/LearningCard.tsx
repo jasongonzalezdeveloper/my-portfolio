@@ -23,26 +23,26 @@ export default function LearningCard({ item, index }: LearningCardProps) {
       transition={{ duration: 0.5, delay: reducedMotion ? 0 : index * 0.08 }}
       className="scroll-snap-center flex-shrink-0 w-64 sm:w-auto"
     >
-      <GlassCard className="h-full hover:border-[#f59e0b]/20 transition-colors duration-300 flex flex-col">
+      <GlassCard className="h-full hover:border-accent/20 transition-colors duration-300 flex flex-col">
         {/* Icon */}
         <span aria-hidden="true" className="text-4xl mb-4 block">
           {item.icon}
         </span>
 
         {/* In Progress tag */}
-        <span className="inline-flex items-center gap-1.5 text-[10px] font-semibold text-[#f59e0b] tracking-widest uppercase mb-3">
+        <span className="inline-flex items-center gap-1.5 text-[10px] font-mono font-semibold text-accent tracking-widest uppercase mb-3">
           <span
             aria-hidden="true"
-            className="inline-block w-1.5 h-1.5 rounded-full bg-[#f59e0b]"
+            className="inline-block w-1.5 h-1.5 rounded-full bg-accent"
             style={{ animation: reducedMotion ? "none" : "pulse 2s cubic-bezier(0.4,0,0.6,1) infinite" }}
           />
-          Working on it
+          {t("learning.working_on_it")}
         </span>
 
-        <h3 className="text-[#e8f0fe] font-bold mb-2">
+        <h3 className="text-text font-bold mb-2">
           {t(item.titleKey as Parameters<typeof t>[0])}
         </h3>
-        <p className="text-[#7a8ba8] text-sm leading-relaxed flex-1">
+        <p className="text-text-muted text-sm leading-relaxed flex-1">
           {t(item.descriptionKey as Parameters<typeof t>[0])}
         </p>
       </GlassCard>

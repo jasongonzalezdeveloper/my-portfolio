@@ -45,12 +45,12 @@ export default function Learning() {
     <SectionWrapper id="learning" ariaLabelledBy="learning-heading">
       <h2
         id="learning-heading"
-        className="text-3xl sm:text-4xl font-bold text-[#e8f0fe] mb-4 text-center"
+        className="text-3xl sm:text-4xl font-bold text-text mb-4 text-center"
       >
         {t("learning.heading")}
-        <span aria-hidden="true" className="text-[#00d4ff]">.</span>
+        <span aria-hidden="true" className="text-accent">.</span>
       </h2>
-      <p className="text-[#7a8ba8] text-center mb-12 max-w-xl mx-auto">
+      <p className="text-text-muted text-center mb-12 max-w-xl mx-auto">
         {t("learning.subtitle")}
       </p>
 

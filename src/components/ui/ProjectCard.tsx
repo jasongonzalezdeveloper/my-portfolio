@@ -309,12 +309,12 @@ function ProductionCard({ item }: { item: ProjectItem }) {
               href={item.liveUrl}
               target="_blank"
               rel="noopener noreferrer"
-              aria-label={`${t("projects.live_demo")} — ${t(item.titleKey)} — ${t("a11y.external_link")}`}
+              aria-label={`${t("projects.visit_site")} — ${t(item.titleKey)} — ${t("a11y.external_link")}`}
               className="flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-semibold
                          bg-accent text-bg hover:bg-accent-strong transition-colors duration-200 min-h-[44px]"
             >
               <ExternalLinkIcon />
-              {t("projects.live_demo")}
+              {t("projects.visit_site")}
             </a>
           )}
           {item.githubUrl && (

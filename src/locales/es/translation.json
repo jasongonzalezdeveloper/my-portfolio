@@ -82,6 +82,7 @@
     "featured_label": "Destacado",
     "in_production": "En Producción",
     "live_demo": "Ver Demo",
+    "visit_site": "Ver Sitio",
     "view_code": "Ver Código",
     "math_jenga_title": "Math Jenga",
     "math_jenga_description": "Un juego que empecé por diversión y se convirtió en un proyecto real. Es una torre Jenga donde cada bloque tiene un problema matemático. Los niños tienen que resolverlo para colocar el bloque. Tiene modo daltónico, navegación por teclado, sistema de vidas y funciona en inglés y español.",

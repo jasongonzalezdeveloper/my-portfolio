@@ -82,6 +82,7 @@
     "featured_label": "Featured",
     "in_production": "In Production",
     "live_demo": "Live Demo",
+    "visit_site": "Visit Site",
     "view_code": "View Code",
     "math_jenga_title": "Math Jenga",
     "math_jenga_description": "A game I built for fun that turned into a real project. It's a Jenga tower where each block has a math problem. Kids have to solve it to place the block. Has colorblind mode, keyboard nav, a lives system, and works in both English and Spanish.",

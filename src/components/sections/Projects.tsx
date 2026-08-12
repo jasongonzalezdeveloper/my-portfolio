@@ -25,8 +25,9 @@ const PROJECTS: ProjectItem[] = [
       "Tailwind CSS", "Express", "Prisma", "PostgreSQL", "Redis", "OAuth2",
     ],
     image: "/images/servitech.png",
+    liveUrl: "https://servitechcr.net",
     isFeatured: false,
-    isUnderConstruction: true,
+    isInProduction: true,
   },
   {
     id: "copicentro",

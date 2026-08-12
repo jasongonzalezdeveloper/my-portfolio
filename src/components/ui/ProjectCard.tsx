@@ -6,6 +6,7 @@ import Image from "next/image";
 import GlassCard from "./GlassCard";
 import TechBadge from "./TechBadge";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
+import { assetPath } from "@/lib/assetPath";
 import type { ProjectItem } from "@/types";
 
 interface ProjectCardProps {
@@ -88,7 +89,7 @@ function UnderConstructionCard({ item }: { item: ProjectItem }) {
         {item.image && (
           <div className="relative w-full h-44 rounded-lg overflow-hidden mb-5">
             <Image
-              src={item.image}
+              src={assetPath(item.image)}
               alt={t(item.titleKey)}
               fill
               className="object-cover object-top"
@@ -165,7 +166,7 @@ function FeaturedCard({ item }: { item: ProjectItem }) {
         {item.image ? (
           <div className="relative w-full h-52 rounded-lg mb-6 overflow-hidden">
             <Image
-              src={item.image}
+              src={assetPath(item.image)}
               alt={title}
               fill
               className="object-cover object-top"
@@ -273,7 +274,7 @@ function ProductionCard({ item }: { item: ProjectItem }) {
         {item.image && (
           <div className="relative w-full h-44 rounded-lg overflow-hidden mb-5">
             <Image
-              src={item.image}
+              src={assetPath(item.image)}
               alt={t(item.titleKey)}
               fill
               className="object-cover object-top"
@@ -360,7 +361,7 @@ function PoCCard({ item }: { item: ProjectItem }) {
         {item.image && (
           <div className="relative w-full h-44 rounded-lg overflow-hidden mb-5">
             <Image
-              src={item.image}
+              src={assetPath(item.image)}
               alt={t(item.titleKey)}
               fill
               className="object-cover object-top"
